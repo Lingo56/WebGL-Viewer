@@ -1,2 +1,2 @@
-# WebGL-Cow
+# WebGL Viewer
 A WebGL model viewer
