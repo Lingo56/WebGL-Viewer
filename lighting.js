@@ -141,7 +141,8 @@ function drawWireframeCone(
       // Perform matrix multiplication
       let rotatedVertexMatrix = mult(vertexMatrix, rotationMatrix);
 
-      // Flip the Z-axis
+      // Flip the X-axis and Z-axis
+      rotatedVertexMatrix[0][0] *= -1;
       rotatedVertexMatrix[0][2] *= -1;
 
       // Convert the result back to a vec3 object
