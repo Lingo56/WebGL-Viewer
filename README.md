@@ -1,4 +1,6 @@
 # WebGL Viewer
+https://lingo56.github.io/WebGL-Viewer/
+
 Demos Phong shading in WebGL by shining a spotlight and point light on a model.
 
 ## Controls
