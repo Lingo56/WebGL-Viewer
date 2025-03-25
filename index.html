@@ -1,6 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebGL Viewer</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+      }
+      canvas {
+        display: block; /* Removes default inline spacing */
+      }
+    </style>
     <script type="text/javascript" src="scene.js"></script>
     <script type="text/javascript" src="cow.js"></script>
     <script type="text/javascript" src="input.js"></script>
@@ -9,10 +25,7 @@
     <script type="text/javascript" src="./common/webgl-utils.js"></script>
     <script type="text/javascript" src="./common/initShaders2.js"></script>
   </head>
-
   <body>
-    <div id="l0">
-      <canvas id="glCanvas" tabindex="1" width="100%" height="100%"></canvas>
-    </div>
+    <canvas id="glCanvas"></canvas>
   </body>
 </html>

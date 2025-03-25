@@ -63,6 +63,12 @@ let lightTypeUniformLocation;
 window.onload = function initRendering() {
   canvas = document.getElementById("glCanvas");
 
+  // Set canvas to full window size
+  resizeCanvas();
+
+  // Add resize event listener
+  window.addEventListener("resize", resizeCanvas);
+
   gl = WebGLUtils.setupWebGL(canvas);
   if (!gl) {
     alert("WebGL isn't available");
@@ -93,6 +99,17 @@ window.onload = function initRendering() {
 
   render();
 };
+
+// Function to resize canvas to match window size
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  if (gl) {
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    aspect = canvas.width / canvas.height; // Update aspect ratio when window is resized
+  }
+}
 
 function initShaderVariables() {
   //  Load shaders and initialize attribute buffers
